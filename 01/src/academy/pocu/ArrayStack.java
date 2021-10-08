@@ -9,7 +9,6 @@ public class ArrayStack implements Stack{
         top = -1;
         this.stackSize = stackSize;
         stackArray = new char[stackSize];
-
     }
 
     @Override
