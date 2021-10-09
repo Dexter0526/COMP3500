@@ -7,6 +7,10 @@ public class Sumrecursive {
 
         sum = sumRecursive(100);
         System.out.println(sum);
+
+//        큰 숫자 스택 오버플로 발생!
+        sum = sumRecursive(100000);
+        System.out.println(sum);
     }
 
 //    꼬리 재귀가 아니다.
