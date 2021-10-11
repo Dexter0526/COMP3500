@@ -108,3 +108,20 @@ Why? factorialRecursive(n - 1, n * fac); 이 코드가 마지막 실행이기 �
 https://github.com/Dexter0526/COMP3500/blob/main/02/src/academy/pocu/Sumrecursive.java
 
 https://github.com/Dexter0526/COMP3500/blob/main/02/src/academy/pocu/Sumtailrecursive.java
+
+## 주먹구구식(brute-force) 알고리즘
+- 모든 경우의 수를 시도하는 알고리즘
+  - 최소 O(N)
+- 효율성을 고려하지 않음
+
+### 간단한 주먹구구식 알고리듬의 예와 시간 복잡도
+- 완전(exhaustive) 검색
+- 배열에서 평균 구하기
+- 배열에서 최솟값, 최댓값 찾기
+- 그 외 다수
+- 모두 O(N)
+
+### 시간 복잡도
+- O(N) 보다 시간 복잡도가 높은 알고리즘이 많음
+- O(N^3) 정도부터 최적화 고려
+- 컴퓨터에서 실행하기에는 너무 느린 알고리즘들도 많음
