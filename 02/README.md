@@ -203,3 +203,32 @@ NP를 다항식 시간안에 검증할 수 있다?
 - 시간 복잡도 : O(log n)
 - 분할 정복(divide-and-conquer) 알고리즘 중 하나
 - 재귀 함수로 쉽게 작성 가능
+<pre>
+//    l : 시작점, r : 끝점
+public static int binarySearchRecursive(int nums[], int l, int r, int value){
+    count++;
+    int m = (l + r) / 2;
+    if(nums[m] == value) return m;
+
+    return value < nums[m] ? binarySearchRecursive(nums, l, m - 1, value) : binarySearchRecursive(nums, m + 1, r, value);
+}
+</pre>
+
+
+### 정렬 후 이진 탐색 vs 선형 탐색
+- 배열이 안 바뀌는 경우
+  - 탐색할 일이 많은 경우
+    - 정렬 한 번 후, 이진 탐색 여러 번
+    - O(정렬) + O(log n) * x
+  - 탐색을 한 번만 할 경우
+    - 선형 탐색
+    - O(n)
+- 배열이 바뀌는 경우
+  - 요소를 삽입하는 경우만 문제
+  - 보통 선형 탐색 사용
+  - 이진 탐색을 사용하려면?
+    - 탐색 전에 배열 정렬
+    - 선형 탐색보다 느릴 수 있음
+
+
+
