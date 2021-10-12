@@ -6,3 +6,6 @@ https://github.com/Dexter0526/COMP3500/tree/main/01
 
 ## 2. 재귀함수, 주먹구구식 알고리듬, 이진 탐색
 https://github.com/Dexter0526/COMP3500/tree/main/02
+
+## 3. 정렬 알고리즘
+https://github.com/Dexter0526/COMP3500/tree/main/03
