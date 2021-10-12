@@ -6,9 +6,11 @@ public class Sort {
     public static void main(String[] args) {
         int[] numbers = {1,4, 3, 1, 2, 0};
         bubbleSort(numbers);
-        System.out.println(Arrays.toString(numbers));
+        System.out.println("버블 정렬 ::: " + Arrays.toString(numbers));
 
-        
+        numbers = new int[]{1, 4, 3, 1, 2, 0};
+        selectionSort(numbers);
+        System.out.println("선택 정렬 ::: " + Arrays.toString(numbers));
     }
 
 //    버블 정렬
@@ -21,6 +23,22 @@ public class Sort {
                     numbers[j] = temp;
                 }
             }
+        }
+    }
+
+    public static void selectionSort(int[] numbers){
+        for(int i = 0; i < numbers.length - 1; i++){
+            int min = numbers[i];
+            int index = i;
+            for(int j = i + 1; j < numbers.length; j++){
+                if(min > numbers[j]) {
+                    min = numbers[j];
+                    index = j;
+                }
+            }
+            int temp = numbers[index];
+            numbers[index] = numbers[i];
+            numbers[i] = temp;
         }
     }
 }
