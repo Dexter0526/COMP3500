@@ -90,6 +90,7 @@ public class Sort {
         quickSortRecursive(numbers, pivotPos + 1, right);
     }
 
+//    로무토(Lomuto) 분할법
     public static int partition(int[] numbers, int left, int right){
         int pivot = numbers[right];
 
@@ -105,6 +106,9 @@ public class Sort {
 
         return pivotPos;
     }
+
+//    호어(Hoare) 분할법 (작성)
+
 
     public static void swap(int[] numbers, int i, int j){
         int temp = numbers[j];
