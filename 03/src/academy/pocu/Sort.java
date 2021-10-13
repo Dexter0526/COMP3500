@@ -19,6 +19,10 @@ public class Sort {
         numbers = new int[]{1, 4, 3, 1, 2, 0};
         quickSort(numbers);
         System.out.println("퀵 정렬 ::: " + Arrays.toString(numbers));
+
+        numbers = new int[]{1, 4, 3, 1, 2, 0};
+        mergeSort(numbers);
+        System.out.println("병합 정렬 ::: " + Arrays.toString(numbers));
     }
 
 //    버블 정렬
@@ -116,8 +120,56 @@ public class Sort {
         numbers[i] = temp;
     }
 
+    public static int[] sorted;
 //    병합 정렬
     public static void mergeSort(int[] numbers){
+        sorted = new int[numbers.length];
+
+        mergeSortRecursive(numbers, 0, numbers.length - 1);
+        sorted = null;
+    }
+
+    public static void mergeSortRecursive(int[] numbers, int left, int right){
+        if(left == right) return;
+
+        int mid = (left + right) / 2;
+
+        mergeSortRecursive(numbers, left, mid);
+        mergeSortRecursive(numbers, mid + 1, right);
+
+        merge(numbers, left, right, mid);
+    }
+
+    public static void merge(int[] numbers, int left, int right, int mid){
+        int i, j, k, start, end;
+        i = left;
+        j = left;
+        k = mid + 1;
+
+//        i : 좌, k : 우
+        while (i <= mid && k <= right){
+            if(numbers[i] <= numbers[k]){
+                sorted[j++] = numbers[i++];
+            }else{
+                sorted[j++] = numbers[k++];
+            }
+        }
+
+        if(i > mid){
+            start = k;
+            end = right;
+        }else{
+            start = i;
+            end = mid;
+        }
+
+        for(int l = start; l <= end; l++){
+            sorted[j++] = numbers[l];
+        }
+
+        for(int l = left; l <= right; l++){
+            numbers[l] = sorted[l];
+        }
 
     }
 }
