@@ -15,6 +15,10 @@ public class Sort {
         numbers = new int[]{1, 4, 3, 1, 2, 0};
         insertionSort(numbers);
         System.out.println("삽입 정렬 ::: " + Arrays.toString(numbers));
+
+        numbers = new int[]{1, 4, 3, 1, 2, 0};
+        quickSort(numbers);
+        System.out.println("퀵 정렬 ::: " + Arrays.toString(numbers));
     }
 
 //    버블 정렬
@@ -33,6 +37,7 @@ public class Sort {
         System.out.println("count:::" + count);
     }
 
+//    선택 정렬
     public static void selectionSort(int[] numbers){
         int count = 0;
         for(int i = 0; i < numbers.length - 1; i++){
@@ -52,6 +57,7 @@ public class Sort {
         System.out.println("count:::" + count);
     }
 
+//    삽입 정렬
     public static void insertionSort(int[] numbers){
         int count = 0;
         for(int i = 0; i < numbers.length; i++){
@@ -66,5 +72,43 @@ public class Sort {
             }
         }
         System.out.println("count:::" + count);
+    }
+
+//    퀵 정렬
+    public static void quickSort(int[] numbers){
+        quickSortRecursive(numbers, 0, numbers.length - 1);
+    }
+
+    public static void  quickSortRecursive(int[] numbers, int left, int right){
+        if(left >= right) return;
+//        정렬
+        int pivotPos = partition(numbers, left, right);
+
+//        좌
+        quickSortRecursive(numbers, left, pivotPos - 1);
+//        우
+        quickSortRecursive(numbers, pivotPos + 1, right);
+    }
+
+    public static int partition(int[] numbers, int left, int right){
+        int pivot = numbers[right];
+
+        int i = left - 1;
+        for(int j = left; j < right; j++){
+            if(numbers[j] < pivot){
+                i++;
+                swap(numbers, i, j);
+            }
+        }
+        int pivotPos = i + 1;
+        swap(numbers, pivotPos, right);
+
+        return pivotPos;
+    }
+
+    public static void swap(int[] numbers, int i, int j){
+        int temp = numbers[j];
+        numbers[j] = numbers[i];
+        numbers[i] = temp;
     }
 }
