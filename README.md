@@ -9,3 +9,6 @@ https://github.com/Dexter0526/COMP3500/tree/main/02
 
 ## 3. 정렬 알고리즘
 https://github.com/Dexter0526/COMP3500/tree/main/03
+
+## 4. 해시 알고리즘
+https://github.com/Dexter0526/COMP3500/tree/main/04
