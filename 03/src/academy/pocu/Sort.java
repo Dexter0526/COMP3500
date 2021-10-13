@@ -115,4 +115,9 @@ public class Sort {
         numbers[j] = numbers[i];
         numbers[i] = temp;
     }
+
+//    병합 정렬
+    public static void mergeSort(int[] numbers){
+
+    }
 }
