@@ -15,3 +15,6 @@ https://github.com/Dexter0526/COMP3500/tree/main/04
 
 ## 5. 암호화
 https://github.com/Dexter0526/COMP3500/tree/main/05
+
+## 6. 트리, 이진 탐색 트리, 레드-블랙 트리
+https://github.com/Dexter0526/COMP3500/tree/main/06
