@@ -8,7 +8,9 @@ public class Bst {
         insertNode(root, 24);
         insertNode(root, 42);
         insertNode(root, 33);
+//        insertNode(root, 34);
         insertNode(root, 22);
+        insertNode(root, 19);
 
         insertNode(root, 55);
         insertNode(root, 52);
@@ -61,7 +63,11 @@ public class Bst {
 
         num = root.getRight().getLeft()
                 .getRight().getData();
-        System.out.print(num);
+        System.out.println(num);
+
+        deleteNode(root, 24, null);
+
+        System.out.println("after delete ::: " + getNodeOrNull(root, 50).getLeft().getLeft().getData());
     }
 
     public static Node getNodeOrNull(Node node, int data){
@@ -74,6 +80,18 @@ public class Bst {
         return getNodeOrNull(node.getRight(), data);
     }
 
+//    부모 노드 찾기
+    public static Node getParentNodeOrNull(Node node, int data){
+        if(node == null) return null;
+
+        if(node.getRight().getData() == data) return node;
+        else if(node.getLeft().getData() == data) return node;
+
+        if(data < node.getData()) return getParentNodeOrNull(node.getLeft(), data);
+
+        return getParentNodeOrNull(node.getRight(), data);
+    }
+
     public static Node insertNode(Node node, int data){
         if(node == null) return new Node(data);
 
@@ -84,5 +102,49 @@ public class Bst {
         }
 
         return node;
+    }
+    
+    public static Node deleteNode(Node node, int data, Node parentNode){
+        if(parentNode == null){
+            parentNode = getParentNodeOrNull(node, data);
+
+            if(parentNode.getLeft() != null && parentNode.getLeft().getData() == data){
+                if(parentNode.getLeft().getLeft() == null){
+                    parentNode.setLeft(parentNode.getLeft().getRight());
+                    return parentNode;
+                }else{
+                    deleteNode(parentNode.getLeft().getLeft(), data, parentNode);
+                }
+
+            }else if(parentNode.getRight() != null && parentNode.getRight().getData() == data){
+                if(parentNode.getRight().getLeft() == null){
+                    parentNode.setRight(parentNode.getRight().getRight());
+                    return parentNode;
+                }else{
+                    deleteNode(parentNode.getRight().getLeft(), data, parentNode);
+                }
+
+            }
+
+            return null;
+        }
+
+        if(node.getRight() == null) {
+
+            if(parentNode.getLeft() != null && parentNode.getLeft().getData() == data){
+                parentNode.getLeft().setData(node.getData());
+            }else if(parentNode.getRight() != null && parentNode.getRight().getData() == data){
+                parentNode.getRight().setData(node.getData());
+            }
+
+            if(node.getLeft() != null){
+                node.setData(node.getLeft().getData());
+                node.setRight(node.getLeft().getRight());
+                node.setLeft(node.getLeft().getLeft());
+            }
+
+            return parentNode;
+        }
+        return deleteNode(node.getRight(), data, parentNode);
     }
 }
