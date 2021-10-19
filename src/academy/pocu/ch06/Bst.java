@@ -1,5 +1,7 @@
 package academy.pocu.ch06;
 
+import java.util.Stack;
+
 public class Bst {
 
     public static void main(String[] args) {
@@ -156,4 +158,29 @@ public class Bst {
         System.out.println(node.getData());
         traverseInorder(node.getRight());
     }
+
+    public static void traversePreOrderRecursive(Node node){
+        if(node == null) return;
+
+        System.out.println(node.getData());
+        traversePreOrderRecursive(node.getLeft());
+        traversePreOrderRecursive(node.getRight());
+    }
+
+    public static void traversePreOrder(Node node){
+        if (node == null) return;
+
+        Stack<Node> nodes = new Stack<>();
+        nodes.push(node);
+
+        while (!nodes.empty()){
+            Node temp = nodes.pop();
+            System.out.println(temp.getData());
+
+            if(temp.getRight() != null) nodes.push(temp.getRight());
+            if(temp.getLeft() != null) nodes.push(temp.getLeft());
+        }
+    }
+
+    
 }
