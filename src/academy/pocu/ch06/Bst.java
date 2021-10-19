@@ -147,4 +147,13 @@ public class Bst {
         }
         return deleteNode(node.getRight(), data, parentNode);
     }
+
+//    중위 순회
+    public static void traverseInorder(Node node){
+        if(node == null) return;
+
+        traverseInorder(node.getLeft());
+        System.out.println(node.getData());
+        traverseInorder(node.getRight());
+    }
 }

@@ -105,5 +105,48 @@ public class Node{
 1. 지울 값을 가지고 있는 노드를 찾음
 2. 그 바로 전 값을 가진 노드를 찾음(or 다음 값)
   - 왼쪽 하위 트리의 제일 오른쪽 리프
-3. 두 값을 교환
+3. 두 값을 교환165
 4. 리프 노드를 삭제
+
+### 트리 순회(tree traversal)
+- 대표적인 3가지 트리 순회법
+  - 전위(pre-order) 순회
+  - 중위(in-order) 순회
+  - 후위(post-order) 순회
+- 하위 트리와 비교했을 때 현재 노드의 방문 순서
+  - 중위 : 왼족 하위 트리 -> 현재 노드 -> 오른쪽 하위 트리
+  - 전위 : 현재 노드 -> 왼쪽 하위 트리 -> 오른쪽 하위 트리
+  - 후위 : 왼쪽 하위 트리 -> 오른쪽 하위 트리 -> 현재 노드
+  
+<pre>
+public static void traverseInorder(Node node) {
+    if(node == null) return;
+    
+    traverseInorder(node.left);
+    System.out.println(node.data);
+    traverseInorder(node.right);
+}
+</pre>
+
+#### 전위 순회의 용도
+- 트리복사
+  - 부모가 있어야 자식도 추가할 수 있음
+  - 따라서 전위 순회가 적합
+    - 부모를 먼저 나열
+    - 다른 순회는 부모가 중간 혹은 마지막
+  - 물론 다른 순회로도 복사는 가능
+- 수식의 전위 표기법
+  - 수식은 보통 중위 표기법(infix notation)을 사용
+    - 괄호로 우선 순위를 정해줄 수 있음
+    - 오른쪽 트리를 중위 순회하면 다음 수식이 나옴
+    - A * (B - C) - (D + E)
+  - 전위 표기법(prefix notation)
+    - 폴란드 표기법이라고도 불림
+    - 연산자/괄호의 우선 순위가 없음(읽는 순서대로)
+  
+#### 후위 순회
+- 후위 표기법(postfix notation)
+  - 역 폴란드 표기법이라고도 불림
+  
+
+
