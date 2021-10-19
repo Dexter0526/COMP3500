@@ -20,15 +20,15 @@ public class Node {
     }
 
     public int getData() {
-        return data;
+        return this.data;
     }
 
     public Node getLeft() {
-        return left;
+        return this.left;
     }
 
     public Node getRight() {
-        return right;
+        return this.right;
     }
 
     public void setData(int data) {
