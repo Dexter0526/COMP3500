@@ -182,5 +182,16 @@ public class Bst {
         }
     }
 
-    
+//    깊은 복사
+    public static Node copyRecursive(Node node){
+        if(node == null) return null;
+
+        Node newNode = new Node(node.getData());
+        newNode.setLeft(copyRecursive(node.getLeft()));
+        newNode.setRight(copyRecursive(node.getRight()));
+
+        return newNode;
+    }
+
+
 }
