@@ -22,3 +22,5 @@ https://github.com/Dexter0526/COMP3500/tree/main/src/academy/pocu/ch06
 ## 7. 트라이, 공간분할 트리
 https://github.com/Dexter0526/COMP3500/tree/main/src/academy/pocu/ch07
 
+## 8. 깊이 우선 탐색, 너비 우선 탐색, 미니맥스
+https://github.com/Dexter0526/COMP3500/tree/main/src/academy/pocu/ch08
