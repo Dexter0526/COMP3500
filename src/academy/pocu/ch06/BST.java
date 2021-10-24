@@ -2,7 +2,7 @@ package academy.pocu.ch06;
 
 import java.util.Stack;
 
-public class Bst {
+public class BST {
 
     public static void main(String[] args) {
         Node root = new Node(50);
