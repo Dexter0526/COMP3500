@@ -104,11 +104,6 @@ Why? factorialRecursive(n - 1, n * fac); 이 코드가 마지막 실행이기 �
 - 그럼에도 작성 이유는 최적화 때문(자바는 지원 X)
 - 꼬리 재귀는 반복문으로 쉽게 변경 가능!
 
-#### 재귀 함수로 총합 구하기
-https://github.com/Dexter0526/COMP3500/blob/main/02/src/academy/pocu/Sumrecursive.java
-
-https://github.com/Dexter0526/COMP3500/blob/main/02/src/academy/pocu/Sumtailrecursive.java
-
 ## 주먹구구식(brute-force) 알고리즘
 - 모든 경우의 수를 시도하는 알고리즘
   - 최소 O(N)
