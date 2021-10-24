@@ -3,6 +3,7 @@ package academy.pocu.ch03;
 import java.util.Arrays;
 import java.util.Comparator;
 
+// 책 색인(안정성 테스트)
 public class ApplicationSort {
     public static void main(String[] args) {
         Book[] books = new Book[10];

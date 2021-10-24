@@ -1,5 +1,6 @@
 package academy.pocu.ch01;
 
+// 연결 리스트 노드 객체
 public class Node {
     private String data;
     private Node node;

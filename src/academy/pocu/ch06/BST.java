@@ -159,6 +159,7 @@ public class BST {
         traverseInorder(node.getRight());
     }
 
+//    전위 순회
     public static void traversePreOrderRecursive(Node node){
         if(node == null) return;
 
@@ -166,7 +167,8 @@ public class BST {
         traversePreOrderRecursive(node.getLeft());
         traversePreOrderRecursive(node.getRight());
     }
-
+    
+//    후위 순회(재귀 x)
     public static void traversePreOrder(Node node){
         if (node == null) return;
 

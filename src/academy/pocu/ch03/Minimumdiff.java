@@ -3,6 +3,7 @@ package academy.pocu.ch03;
 import java.util.Arrays;
 import java.util.Random;
 
+// 배열의 최소 차이 찾기
 public class Minimumdiff {
     public static void main(String[] args) {
         Random random = new Random(512);

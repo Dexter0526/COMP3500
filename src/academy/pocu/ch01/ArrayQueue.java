@@ -1,5 +1,6 @@
 package academy.pocu.ch01;
 
+// 큐 배열 구현
 public class ArrayQueue implements Queue {
     private char[] queueArray;
     private int back;

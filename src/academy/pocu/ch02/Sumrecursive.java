@@ -1,5 +1,6 @@
 package academy.pocu.ch02;
 
+// 합계 구하기(재귀)
 public class Sumrecursive {
     public static void main(String[] args) {
         int sum = sumRecursive(10);

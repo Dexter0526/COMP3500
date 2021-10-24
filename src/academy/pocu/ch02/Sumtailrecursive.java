@@ -1,5 +1,6 @@
 package academy.pocu.ch02;
 
+// 합계 구하기(꼬리 재귀)
 public class Sumtailrecursive {
     public static void main(String[] args) {
         int sum = sumtailrecursive(10, 0);

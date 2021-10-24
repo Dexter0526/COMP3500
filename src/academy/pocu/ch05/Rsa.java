@@ -10,6 +10,7 @@ import java.security.PublicKey;
 import java.security.SecureRandom;
 import java.util.Base64;
 
+// 비대칭 키 암호화
 public class Rsa {
 
     public static void main(String[] args) {

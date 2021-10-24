@@ -6,6 +6,7 @@ import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
+// 대칭키 암호화
 public class Aes {
     public static void main(String[] args) {
         String plaintext = "My message";

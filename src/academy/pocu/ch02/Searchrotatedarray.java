@@ -1,5 +1,6 @@
 package academy.pocu.ch02;
 
+// 회전 배열 탐색
 public class Searchrotatedarray {
     public static void main(String[] args) {
         int[] arry = new int[]{20, 25, 26, 29, 33, 1, 3, 5, 6, 10, 11, 19};

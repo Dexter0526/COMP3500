@@ -1,5 +1,6 @@
 package academy.pocu.ch02;
 
+// 이진 탐색(재귀)
 public class BinarySearchRecursive {
     static int count = 0;
 

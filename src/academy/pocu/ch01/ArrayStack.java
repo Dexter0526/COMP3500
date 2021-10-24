@@ -1,5 +1,6 @@
 package academy.pocu.ch01;
 
+// 스택 배열 구현
 public class ArrayStack implements Stack{
     private char[] stackArray;
     private int top;

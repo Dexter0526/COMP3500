@@ -2,6 +2,7 @@ package academy.pocu.ch01;
 
 import java.util.NoSuchElementException;
 
+// 연결 리스트 구현
 public class LinkedList {
     private Node head;
     private Node tail;
