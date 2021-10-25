@@ -24,3 +24,6 @@ https://github.com/Dexter0526/COMP3500/tree/main/src/academy/pocu/ch07
 
 ## 8. 깊이 우선 탐색, 너비 우선 탐색, 미니맥스
 https://github.com/Dexter0526/COMP3500/tree/main/src/academy/pocu/ch08
+
+## 9. 동적 계획법, 그리디 알고리즘
+https://github.com/Dexter0526/COMP3500/tree/main/src/academy/pocu/ch09
