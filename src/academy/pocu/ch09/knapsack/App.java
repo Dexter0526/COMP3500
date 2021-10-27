@@ -13,7 +13,7 @@ public class App {
         int maxValue = getMaxValue(15, items);
 
         System.out.println(String.format("Max Value: %d", maxValue));
-        
+
     }
 
     private static int getMaxValue(int numSpace, Item[] items){
