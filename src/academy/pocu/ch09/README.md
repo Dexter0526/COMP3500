@@ -234,3 +234,14 @@ public static int fibonacci(int number){
 - 허프만 코딩
 - ...
 
+#### 양자화(quantization) - 손실 압축
+- 원본에서 비슷한 값들을 합쳐 값의 개수를 줄이는 방법
+- 따라서 값 표현에 사용하는 비트 수를 줄일 수 있음
+- 연산 자체는 매우 간단
+- 품질 손상을 최소화할 수 있는 방법 고안이 중요
+    - JPG는 주파수 데이터로 바뀐 뒤(DCT) 양자화
+    - DXT1 이미지는 4X4 블록마다 16비트 RGB 5:6:5 색상 둘을 사용
+    - 보간(interpolation)
+
+![img.png](img/img_1.png)
+
