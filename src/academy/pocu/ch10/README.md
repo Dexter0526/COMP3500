@@ -150,3 +150,50 @@ public class Node{
 - 결합 행렬(incidence matrix)
 - 결합 리스트(incidence list)
 - ...
+
+## 그래프의 깊이 우선 탐색
+![img.png](img/img_3.png)
+```
+무한 루프
+public static void searchDepthFirst(Node node){
+    Stack<Node> stack = new Stack<>();
+    stack.push(node);
+    
+    while(!stack.empty()){
+        Node next = stack.pop();
+        
+        System.out.println(next.data);
+        
+        for(Node child : next.children){
+            stack.push(child);
+        }
+    }
+}
+```
+
+### 무한 루프 해결법
+- 이미 처리했던 노드를 다시 처리하면 안됨
+- 방문했던 노드를 기억할 방법이 필요
+    - 전역적으로 방문했던 노드를 기억
+    - 각 노드마다 방문했는지 여부를 기억
+- 두 번째 방문시 처리 안 하고 곧바로 다음 노드로 넘어감
+
+```
+public static void searchDepthFirst(Node node){
+    HashSet<Node> visited = new HashSet<>();
+    Stack<Node> stack = new Stack<>();
+    stack.push(node);
+    
+    while(!stack.empty()){
+        Node next = stack.pop();
+        
+        System.out.println(next.data);
+        visited.add(next);
+        for(Node neighbor : next.neighbors){
+            if(!visited.contains(neighbor)){
+               stack.push(neighbor);
+            }
+        }
+    }
+}
+```
