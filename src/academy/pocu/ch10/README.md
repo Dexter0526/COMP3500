@@ -179,6 +179,7 @@ public static void searchDepthFirst(Node node){
 - 두 번째 방문시 처리 안 하고 곧바로 다음 노드로 넘어감
 
 ```
+무한 루프 해결
 public static void searchDepthFirst(Node node){
     HashSet<Node> visited = new HashSet<>();
     Stack<Node> stack = new Stack<>();
@@ -192,6 +193,27 @@ public static void searchDepthFirst(Node node){
         for(Node neighbor : next.neighbors){
             if(!visited.contains(neighbor)){
                stack.push(neighbor);
+            }
+        }
+    }
+}
+
+발견한 노드 기억하기
+public static void searchDepthFirst(Node node){
+    HashSet<Node> discovered = new HashSet<>();
+    Stack<Node> stack = new Stack<>();
+    stack.push(node);
+    discovered.add(node);
+    
+    while(!stack.empty()){
+        Node next = stack.pop();
+        
+        System.out.println(next.data);
+
+        for(Node neighbor : next.neighbors){
+            if(!discovered.contains(neighbor)){
+               stack.push(neighbor);
+               discovered.add(neighbor);
             }
         }
     }
