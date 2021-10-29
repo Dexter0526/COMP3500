@@ -14,6 +14,7 @@ public class App {
 
         System.out.println("=======================================");
 
+//        리스트 랜덤
         Collections.shuffle(courses);
 
         sortedCourses = sortTopologically(courses);
@@ -23,6 +24,7 @@ public class App {
         }
     }
 
+//    최초
     private static LinkedList<Course> sortTopologically(ArrayList<Course> courses){
         Set<Course> discovered = new HashSet<>();
         LinkedList<Course> sortedList = new LinkedList<>();
@@ -45,6 +47,7 @@ public class App {
             topologicalSortRecursive(nextCourse, discovered, list);
         }
 
+//        역순 저장
         list.addFirst(course);
     }
 
