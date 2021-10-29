@@ -229,6 +229,10 @@ public static void searchDepthFirst(Node node){
   - 시작점이 존재해야 함
 - 해답이 여럿일 수도 있음
 
+예) DAG
+![img.png](img/img_5.png)
+
+위상 정렬
 ![img.png](img/img_4.png)
 
 
@@ -239,3 +243,22 @@ public static void searchDepthFirst(Node node){
   - 실제로 위상 정렬을 함
   - 위상 정렬 가능한 그래프인지 판단
   
+### DFS를 사용한 위상 정렬
+DFS만으로 간단히 위상 정렬을 할 수 있음
+
+#### 물 받기부터 시작하는 전위 순회
+1. 물 받기
+2. 스프 넣기
+3. 물 끓이기
+4. 라면 넣기
+5. 파 넣기
+6. 2분 더 끓이기
+7. 계란 넣기
+8. 1분 더 끓이기
+9. 먹기
+10. 건더기 넣기
+11. 라면 봉지 뜯기
+12. 파 썰기
+13. 수저 넣기
+
+
