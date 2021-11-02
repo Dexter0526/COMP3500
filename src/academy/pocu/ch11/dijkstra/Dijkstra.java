@@ -58,7 +58,7 @@ public class Dijkstra {
                 String nextName = next.getName();
                 int nextMinDist = minDists.get(nextName);
 
-                if(newDist > nextMinDist) continue;
+                if(newDist >= nextMinDist) continue;
 
                 minDists.put(nextName, newDist);
                 prevs.put(nextName, nodeName);
