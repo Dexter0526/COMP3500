@@ -163,7 +163,7 @@
         - (m^e)^d = m(mod n)
         - de = 1(mode λ(n))
     
-##### 합동식(modular congruence)
+#### 합동식(modular congruence)
 a ≡ b (mod n),  1 < n
 - mod n이 좌항/우항에 모두 적용됨(a = b % n과 다름)
 - a - b = kn
