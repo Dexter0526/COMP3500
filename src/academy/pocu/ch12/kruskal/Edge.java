@@ -23,6 +23,7 @@ public class Edge implements Comparable<Edge> {
         return node2;
     }
 
+//    S 배열 생성시 오름차순 정렬(가중치 기준)
     @Override
     public int compareTo(Edge o) {
         return this.weight - o.weight;

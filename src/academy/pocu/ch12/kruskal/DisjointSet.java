@@ -16,6 +16,7 @@ public class DisjointSet {
 
     private final HashMap<String, SetNode> sets = new HashMap<>(64);
 
+//    그래프 생성자
     public DisjointSet(final String[] nodes) {
         for (String s : nodes) {
             SetNode setNode = new SetNode(s, 1);
@@ -23,6 +24,7 @@ public class DisjointSet {
         }
     }
 
+//    루트 찾기
     public String find(final String node) {
         assert (this.sets.containsKey(node));
 

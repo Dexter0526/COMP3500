@@ -18,6 +18,7 @@ public class Kruskal {
             String n1 = edges[i].getNode1();
             String n2 = edges[i].getNode2();
 
+//            node1, node2의 root 찾기
             String root1 = set.find(n1);
             String root2 = set.find(n2);
 
