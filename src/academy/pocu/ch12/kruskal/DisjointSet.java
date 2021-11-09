@@ -3,6 +3,7 @@ package academy.pocu.ch12.kruskal;
 import java.util.HashMap;
 
 public class DisjointSet {
+
     private class SetNode {
         private String parent;
         private int size;
