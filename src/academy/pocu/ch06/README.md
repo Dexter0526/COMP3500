@@ -245,10 +245,10 @@ public static void traverseInorder(Node node) {
 #### M과 C가 모두 블랙일 때만 문제
 - M이 레드면 C는 반드시 블랙
 - M이 블랙이고 C가 레드인 경우는?
-  - C의 한쪽 자식은 무족건 NIL (BST 삽입 규칙에 따라)
+  - C의 한쪽 자식은 무조건 NIL (BST 삽입 규칙에 따라)
   - C는 다른 쪽 자식이 레드일 순 없음
   - C의 다른 쪽 자식이 NIL 아닌 블랙일 수도 없음
-  - C의 자식은 무족건 NIL
+  - C의 자식은 무조건 NIL
 
 ![img_!.png](./img/img_1.png "레드-블랙 트리")
 
@@ -289,7 +289,7 @@ public static void traverseInorder(Node node) {
     - Sl이 S의 부모이자 N의 형제가 됨
   - Sl과 S의 색상을 교환
   - case6으로 진행
-    - case6에서는 Sl을 S로 재표기 (무족건 N기준)
+    - case6에서는 Sl을 S로 재표기 (무조건 N기준)
 
 #### 레드-블랙 트리 삭제 전략 - case6
 - 상황
