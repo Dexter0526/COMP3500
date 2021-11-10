@@ -36,3 +36,6 @@ https://github.com/Dexter0526/COMP3500/tree/main/src/academy/pocu/ch11
 
 ## 12. 그래프 3
 https://github.com/Dexter0526/COMP3500/tree/main/src/academy/pocu/ch12
+
+## 13. 기타 알고리즘
+https://github.com/Dexter0526/COMP3500/tree/main/src/academy/pocu/ch13
